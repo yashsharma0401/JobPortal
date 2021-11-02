@@ -20,10 +20,7 @@ DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 print(os.environ.get('DEBUG_VALUE'))
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'localhost'
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -208,6 +205,7 @@ AWS_DEFAULT_ACL = 'public-read'
 
 #STATIC_URL = '{}/{}/'.format(AWS_S3_ENDPOINT_URL, 'static')
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #STATIC_ROOT = 'static/'
 
 #MEDIA_URL = '{}/{}/'.format(AWS_S3_ENDPOINT_URL, 'media')
